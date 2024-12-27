@@ -372,6 +372,8 @@ font-weight: bolder;
 }
 #gallery-section{
     height: 100%;
+    padding-top: 80px;
+    padding-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -383,6 +385,16 @@ font-weight: bolder;
    grid-template-columns: repeat(3,1fr);
    gap: 80px;
    
+
+}
+.submit{
+    background-color: var(--secondary-color);
+    color:black;
+    opacity: 1;
+    font-weight: bolder;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
 
 }
 .gallery-list-item{
@@ -420,12 +432,93 @@ font-weight: bolder;
     width: 180px;
 
 }
+#contact-section{
+    height: 660px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.contentlistitem{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Take full width of the parent */
+    max-width: 700px; /* Optional: Add a max width for better appearance */
+}
+#contact-container{
+    display: flex;
+    
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+   
+}
+
+.form-inputs{ 
+    border: none;
+border-radius: 10px;
+    width: 100%; /* Full width relative to #contact-form */
+    max-width: 700px; /* Restrict maximum width */
+    min-width: 200px; /* Prevent it from becoming too small */
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 20px; /* Add space between inputs */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+.form-inputs:focus{
+    outline: none;
+}
+.submit:hover{
+box-shadow: 1px 1px 5px black;
+background-color: var(--fourth-color);
+color: black;
+transition: 0.3s ease;
+}
+
+textarea.form-inputs {
+    height: 150px; /* Adjust height specifically for textarea */
+    resize: vertical; /* Allow users to resize vertically */
+}
+
+li>span{
+    margin-right: 20px;
+    color: var(--fourth-color) !important;
+    font-size: 30px !important;
+}
+li>span+p{
+    font-size: 22px;
+    font-weight: 500;
+    text-wrap: wrap;
+}
+#contact-section{
+    padding: 30px;
+}
+#contact-heading{
+margin: auto;  
+    font-weight: bolder;
+    color: var(--fourth-color);
+    border-width: 0px 0px 5px 0px;
+    border-color: var(--fourth-color);
+    border-style: solid;
+    width: 180px;
+}
 
 /*Media Query*/
 @media screen and (max-width:1024px) {
     .menu{
         display: block !important;
     }
+    
     #navbar li a{
         display: none;
     }
@@ -536,6 +629,28 @@ margin-top: -90px;
            gap: 15px;
         
         }
+        #contact-section{
+            height: auto;
+        }
+        #contact-form{
+            margin-bottom: 20px;
+        }
+        #contact-container{
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 40px;
+           
+        }
+        li>span+p {
+            font-size: 20px;
+            font-weight: 500;
+            text-wrap: wrap !important;
+
+        }
+
+        
 }
 @media screen and (max-width:728px) {
     #menulist{
