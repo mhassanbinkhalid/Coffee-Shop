@@ -12,6 +12,15 @@ menu.addEventListener("click",()=>{
 
 });
 
+let navlink2=document.querySelectorAll(".navlink2");
+
+navlink2.forEach(link => {
+  link.addEventListener("click",()=>{
+    navbar2.style.right="-2000px";
+  });
+
+
+});
 const swiper = new Swiper('.slider-wrapper', {
     loop: true,
   spaceBetween:25,
